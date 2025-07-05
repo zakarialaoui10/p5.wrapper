@@ -1,4 +1,4 @@
-class P5Shape2D{
+class ZikoP5Shape2D{
     constructor(x, y){
         this.cache = {
             uuid: crypto.randomUUID(),
@@ -37,5 +37,5 @@ class P5Shape2D{
     }
 }
 export{
-    P5Shape2D
+    ZikoP5Shape2D
 }

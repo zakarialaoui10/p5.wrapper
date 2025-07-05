@@ -1,7 +1,7 @@
 // import {map, waitForUIElm} from "ziko"
-import { P5Shape2D } from "./p5shape2d.js"
+import { ZikoP5Shape2D } from "./p5shape2d.js"
 
-class ZikoP5Circle extends P5Shape2D{
+class ZikoP5Circle extends ZikoP5Shape2D{
   constructor(x, y, r){
     super(x, y)
     this.r = r;
