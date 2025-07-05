@@ -58,6 +58,10 @@ class ZikoP5Canvas2D extends ZikoUIElement {
     this.cache.loop_callback = callback;
     return this;
   }
+  frameRate(fps){
+    this.p5.frameRate(fps);
+    return this;
+  }
   append(...items){
     for(const item of items){
         this.items.push(item);
