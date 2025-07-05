@@ -1,0 +1,21 @@
+// import {map, waitForUIElm} from "ziko"
+import { P5Shape2D } from "./p5shape2d.js"
+
+class ZikoP5Circle extends P5Shape2D{
+  constructor(x, y, r){
+    super(x, y)
+    this.r = r;
+  }
+  draw(p){
+    p.ellipse(
+      this.x,
+      this.y,
+      this.r * 2
+    );
+  }
+}
+const P5Circle = (x, y, r) => new ZikoP5Circle(x, y, r)
+export{
+  ZikoP5Circle,
+  P5Circle
+}
