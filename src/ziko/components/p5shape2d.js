@@ -1,19 +1,33 @@
 class P5Shape2D{
     constructor(x, y){
+        this.cache = {
+            uuid: crypto.randomUUID(),
+            renderer : null,
+        }
         this.x = x;
         this.y = y;
     }
-    posX(){
-
+    get uuid(){
+        return this.cache.uuid;
     }
-    posY(){
-        
+    get renderer(){
+        return this.cache.renderer;
     }
-    translateX(){
-
+    posX(x){
+        this.x = x;
+        return this;
     }
-    translateY(){
-
+    posY(y){
+        this.y = y;
+        return this;
+    }
+    translateX(dx){
+        this.x += dx;
+        return this;
+    }
+    translateY(dy){
+        this.y += dy;
+        return this;
     }
     rotateX(){
 
