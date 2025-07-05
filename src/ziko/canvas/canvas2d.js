@@ -74,6 +74,14 @@ class ZikoP5Canvas2D extends ZikoUIElement {
     items.forEach(n=>n.cache.renderer = null);
     return this;
   }
+  pause(){
+    this.p5.noLoop();
+    return this;
+  }
+  resume(){
+    this.p5.loop();
+    return this;
+  }
 }
 
 const P5Canvas2D = (...items) => new ZikoP5Canvas2D(...items);
