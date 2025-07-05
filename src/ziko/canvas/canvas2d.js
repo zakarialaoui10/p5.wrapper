@@ -5,7 +5,8 @@ class ZikoP5Canvas2D extends ZikoUIElement {
     super("div");
     Object.assign(this.cache,{
         iter: 0,
-        loop_callback : null
+        loop_callback : null,
+        isPaused : false
     })
     this.size("300px","300px")
     this.style({
@@ -27,6 +28,7 @@ class ZikoP5Canvas2D extends ZikoUIElement {
             // shape.posX(150+100*cos(this.iter*PI/50))
             // shape.posY(150+100*sin(this.iter*PI/50))
         });
+        console.log()
         this.cache.iter += 1;
       };
     });
@@ -46,6 +48,12 @@ class ZikoP5Canvas2D extends ZikoUIElement {
   }
   get yMax(){
     return this.cache.yMax;
+  }
+  get fps(){
+    return this.p5.getFrameRate();
+  }
+  get isPaused(){
+    return this.cache.isPaused;
   }
   view(xMin = 0, xMax = this.width, yMin = 0, yMax = this.height){
     this.cache.xMax = xMin;
@@ -74,12 +82,22 @@ class ZikoP5Canvas2D extends ZikoUIElement {
     items.forEach(n=>n.cache.renderer = null);
     return this;
   }
+  drawOnce(){
+    this.p5.redraw();
+    return this;
+  }
   pause(){
     this.p5.noLoop();
+    this.cache.isPaused = true;
     return this;
   }
   resume(){
     this.p5.loop();
+    this.cache.isPaused = false;
+    return this;
+  }
+  clear(){
+    this.p5.clear();
     return this;
   }
 }
