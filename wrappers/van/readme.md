@@ -37,3 +37,14 @@ canvas.setCustomLoopCallback(e => {
 van.add(document.body, canvas)
 
 ```
+
+## Other Implementations
+|Library|Implementation|Status|
+|-|-|-|
+|[Zikojs]()|[p5.wrapper/ziko](../ziko/readme.md)| In Progress
+|[Vanjs]()|[p5.wrapper/van](wrappers/van/readme.md)| In Progress
+|[React]()|| To Do
+|[Svelte]()|| To Do 
+|[Vue]()|| To Do
+|[Solid]()|| To Do 
+|[Preact]()|| To Do 
