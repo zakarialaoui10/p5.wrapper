@@ -12,7 +12,4 @@ van.tags = new Proxy(originalTags, {
       return element
     }
   }
-});
-
-// import "ziko-wrapper/van"
-export * from "../ziko/index.js";
+})
