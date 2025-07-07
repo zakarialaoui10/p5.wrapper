@@ -1,5 +1,4 @@
 import van from "vanjs-core";
-import Counter from "./components/Counter";
 import "./App.css";
 import {cos, sin, PI } from "ziko"
 import Technologies from "./technologies.js";
