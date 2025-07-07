@@ -11,14 +11,14 @@
     "build": "cross-env NODE_ENV=production rollup --config rollup.config.js"
   },
   "exports": {
-    "./ziko": "./src/ziko/index.js",
-    "./van": "./src/van/index.js",
-    "./react": "./src/react/index.js",
-    "./svelte": "./src/svelte/index.js",
-    "./vue": "./src/vue/index.js",
-    "./solid": "./src/solid/index.js",
-    "./preact": "./src/preact/index.js",
-    "./astro": "./src/astro/index.js"
+    "./ziko": "./wrappers/ziko/index.js",
+    "./van": "./wrappers/van/index.js",
+    "./react": "./wrappers/react/index.js",
+    "./svelte": "./wrappers/svelte/index.js",
+    "./vue": "./wrappers/vue/index.js",
+    "./solid": "./wrappers/solid/index.js",
+    "./preact": "./wrappers/preact/index.js",
+    "./astro": "./wrappers/astro/index.js"
   },
   "keywords": [
     "zikojs",
