@@ -15,7 +15,7 @@ class ZikoP5Circle extends ZikoP5Shape2D{
     // console.log(p)
   }
 }
-const P5Circle = (x, y, r) => new ZikoP5Circle(x, y, r)
+const P5Circle = ({x = 10, y = 10, r = 30}) => new ZikoP5Circle(x, y, r)
 export{
   ZikoP5Circle,
   P5Circle

@@ -28,7 +28,6 @@ class ZikoP5Canvas2D extends ZikoUIElement {
             // shape.posX(150+100*cos(this.iter*PI/50))
             // shape.posY(150+100*sin(this.iter*PI/50))
         });
-        console.log()
         this.cache.iter += 1;
       };
     });
