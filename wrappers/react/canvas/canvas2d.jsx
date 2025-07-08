@@ -8,9 +8,10 @@ export function P5Canvas2D({children, ...props }){
   const __P5Canvas2D__ = () => {
     const UI = Canvas2D(...items).unrender();
     for(let key in props){
-      console.log(key)
+      console.log(props[key])
       switch(key){
         case "clear": console.log(props[key]) ; break;
+        default : UI[key]?.(props[key]); break;
       }
     }
     return UI
