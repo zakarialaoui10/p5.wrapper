@@ -22,6 +22,7 @@ class ZikoP5Canvas2D extends ZikoUIElement {
       };
       p.draw = () => {
         p.clear();
+        this.view(-1,1,-1,1)
         this.items.forEach((shape) => {
             shape.draw(p)
             this.cache.loop_callback?.call(null, this);
@@ -59,6 +60,12 @@ class ZikoP5Canvas2D extends ZikoUIElement {
     this.cache.xMax = xMax;
     this.cache.yMin = yMin; 
     this.cache.yMax = yMax;
+    const sx = this.width / (xMax - xMin);
+    const sy = this.height / (yMax - yMin);
+    const tx = -xMin * sx;
+    const ty = -yMin * sy;
+    this.p5.resetMatrix()
+    this.p5.applyMatrix(sx, 0, 0, sy, tx, ty)
     return this;
   }
   setCustomLoopCallback(callback){
