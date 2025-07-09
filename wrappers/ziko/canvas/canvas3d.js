@@ -7,7 +7,7 @@ class ZikoP5Canvas3D extends ZikoP5Canvas{
     })
   }
   useOrbitControls(optios){
-    this.cache.useOrbitControls = true;
+    this.cache.use_orbit = true;
     return this;
   }
 }

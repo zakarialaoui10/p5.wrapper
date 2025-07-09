@@ -1,2 +1,2 @@
-// export * from "./primitives.js"
-export * from "./circle.js"
+export * from "./2d/index.js";
+export * from "./3d/index.js";

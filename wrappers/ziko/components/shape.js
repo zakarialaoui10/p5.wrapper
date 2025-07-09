@@ -1,13 +1,15 @@
-class ZikoP5Shape2D{
+class ZikoP5Shape{
     constructor(x, y){
         this.cache = {
             uuid: crypto.randomUUID(),
             renderer : null,
             stroke : null,
             fill : null,
+            x,
+            y,
         }
-        this.x = x;
-        this.y = y;
+        // this.cache.x = x;
+        // this.cache.y = y;
     }
     get uuid(){
         return this.cache.uuid;
@@ -35,19 +37,19 @@ class ZikoP5Shape2D{
         return this;
     }
     posX(x){
-        this.x = x;
+        this.cache.x = x;
         return this;
     }
     posY(y){
-        this.y = y;
+        this.cache.y = y;
         return this;
     }
     translateX(dx){
-        this.x += dx;
+        this.cache.x += dx;
         return this;
     }
     translateY(dy){
-        this.y += dy;
+        this.cache.y += dy;
         return this;
     }
     rotateX(){
@@ -58,5 +60,5 @@ class ZikoP5Shape2D{
     }
 }
 export{
-    ZikoP5Shape2D
+    ZikoP5Shape
 }
