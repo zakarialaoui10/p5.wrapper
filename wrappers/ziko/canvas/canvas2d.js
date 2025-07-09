@@ -131,9 +131,29 @@ class ZikoP5Canvas2D extends ZikoP5Canvas{
       transormationMatrix : new Matrix([[0,0],[0,0],[0,0]])
     })
   }
+    view(xMin = 0, yMin = 0, xMax = this.width, yMax = this.height){
+    this.cache.xMax = xMin;
+    this.cache.xMax = xMax;
+    this.cache.yMin = yMin; 
+    this.cache.yMax = yMax;
+    const sx = this.width / (xMax - xMin);
+    const sy = this.height / (yMax - yMin);
+    const tx = -xMin * sx;
+    const ty = -yMin * sy;
+    this.cache.transormationMatrix.set(0, 0, sx);
+    this.cache.transormationMatrix.set(0, 1, 0);
+    this.cache.transormationMatrix.set(1, 0, 0);
+    this.cache.transormationMatrix.set(1, 1, sy);
+    this.cache.transormationMatrix.set(2, 0, tx);
+    this.cache.transormationMatrix.set(2, 1, ty);
+    // this.cache.scaleFactor = Math.min(sx, sy);
+    // console.log({sx, sy, tx, ty})
+    // this?.p5?.resetMatrix();
+    // this?.p5?.applyMatrix(sx, 0, 0, sy, tx, ty);
+    return this;
+  }
 }
 function mode_dependent_drawing_callback(p){
-    this.view(-100, -100, 100, 100) // 2D
     p.applyMatrix(this.cache.transormationMatrix.arr.flat(1))
 }
 const P5Canvas2D = (...items) => new ZikoP5Canvas2D(...items);
