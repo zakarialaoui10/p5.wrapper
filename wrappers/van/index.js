@@ -1,7 +1,8 @@
 import van from "vanjs-core";
 import { ZikoUIElement } from "ziko"
 
-const originalTags = van.tags
+const originalTags = van.tags;
+const originalAdd = van.add;
 
 van.tags = new Proxy(originalTags, {
   get(target, tagName, receiver) {
@@ -13,6 +14,8 @@ van.tags = new Proxy(originalTags, {
     }
   }
 });
+
+// van.add = new 
 
 // import "ziko-wrapper/van"
 export * from "../ziko/index.js";

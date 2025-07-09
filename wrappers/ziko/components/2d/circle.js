@@ -8,6 +8,10 @@ class ZikoP5Circle extends ZikoP5Shape2D{
       r
     })
   }
+  setRadius(r){
+    this.cache.geometry.r = r;
+    return this;
+  }
   __draw_geo__(p){
       p.circle(
         this.cache.geometry.x,
