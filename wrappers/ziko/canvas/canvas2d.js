@@ -37,6 +37,9 @@ class ZikoP5Canvas2D extends ZikoUIElement {
   get iter(){
     return this.cache.iter;
   }
+  get sf(){
+    return this.cache.scaleFactor;
+  }
   get xMin(){
     return this.cache.xMin;
   }
@@ -64,8 +67,9 @@ class ZikoP5Canvas2D extends ZikoUIElement {
     const sy = this.height / (yMax - yMin);
     const tx = -xMin * sx;
     const ty = -yMin * sy;
-    this.p5.resetMatrix()
-    this.p5.applyMatrix(sx, 0, 0, sy, tx, ty)
+    this.cache.scaleFactor = Math.min(sx, sy);
+    this.p5.resetMatrix();
+    this.p5.applyMatrix(sx, 0, 0, sy, tx, ty);
     return this;
   }
   setCustomLoopCallback(callback){
