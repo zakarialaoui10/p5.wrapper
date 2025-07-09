@@ -7,10 +7,10 @@ class ZikoP5Circle extends ZikoP5Shape2D{
     this.r = r;
   }
   draw(p){
-    p.ellipse(
+    p.circle(
       this.x,
       this.y,
-      this.r * 2
+      this.r 
     );
     // console.log(p)
   }

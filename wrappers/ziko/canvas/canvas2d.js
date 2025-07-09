@@ -22,8 +22,9 @@ class ZikoP5Canvas2D extends ZikoUIElement {
       };
       p.draw = () => {
         p.clear();
-        this.view(-1,1,-1,1)
+        this.view(-100, -100, 100, 100)
         this.items.forEach((shape) => {
+            shape.maintain(p)
             shape.draw(p)
             this.cache.loop_callback?.call(null, this);
             // shape.posX(150+100*cos(this.iter*PI/50))
@@ -58,7 +59,7 @@ class ZikoP5Canvas2D extends ZikoUIElement {
   get isPaused(){
     return this.cache.isPaused;
   }
-  view(xMin = 0, xMax = this.width, yMin = 0, yMax = this.height){
+  view(xMin = 0, yMin = 0, xMax = this.width, yMax = this.height){
     this.cache.xMax = xMin;
     this.cache.xMax = xMax;
     this.cache.yMin = yMin; 

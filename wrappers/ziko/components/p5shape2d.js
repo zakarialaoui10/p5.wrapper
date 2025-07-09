@@ -3,6 +3,8 @@ class ZikoP5Shape2D{
         this.cache = {
             uuid: crypto.randomUUID(),
             renderer : null,
+            stroke : null,
+            fill : null,
         }
         this.x = x;
         this.y = y;
@@ -12,6 +14,25 @@ class ZikoP5Shape2D{
     }
     get renderer(){
         return this.cache.renderer;
+    }
+    maintain(p){
+        ['stroke', 'fill'].forEach(method=>{
+            if(this.cache[method]!==null){
+                // console.log(p[method])
+                // console.log(this.cache[method])
+                p[method](this.cache[method]);
+                // p["stroke"](198)
+            }
+        })
+        return this;
+    }
+    stroke(color){
+        this.cache.stroke = color;
+        return this;
+    }
+    fill(color){
+        this.cache.fill = color;
+        return this;
     }
     posX(x){
         this.x = x;
