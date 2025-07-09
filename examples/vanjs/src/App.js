@@ -4,11 +4,12 @@ import {cos, sin, PI } from "ziko"
 import Technologies from "./technologies.js";
 
 import { P5Canvas3D, P5Circle, P5Box } from "p5.wrapper/van";
-const c1 = P5Circle({x:0,y:0,r:30}).stroke('green')
-const c2 = P5Circle({x:0,y:0,r:30}).stroke('red')
+globalThis.c1 = P5Circle({x:0,y:0,r:30}).stroke('green')
+globalThis.c2 = P5Circle({x:0,y:0,r:30})
 globalThis.c = P5Canvas3D(
-  c1, c2, P5Box()
-).size("300px","400px")
+   c1, c2 ,
+  //  P5Box({w : 100}),
+).size("300px","400px").useOrbitControls()
 // .view(-100, -100, 100, 100)
 c.setCustomLoopCallback(e=>{
   c1.posX(50*cos(e.iter*PI/50))

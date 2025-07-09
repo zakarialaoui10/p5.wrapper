@@ -8,13 +8,18 @@ class ZikoP5Circle extends ZikoP5Shape2D{
       r
     })
   }
-  draw(p){
-    p.circle(
-      this.cache.x,
-      this.cache.y,
-      this.cache.r 
-    );
+  __draw_geo__(p){
+      p.circle(
+        this.cache.x,
+        this.cache.y,
+        this.cache.r 
+      );
   }
+  // draw(p){
+  //   p.push();
+
+  //   p.pop();
+  // }
 }
 const P5Circle = ({x = 10, y = 10, r = 30}) => new ZikoP5Circle(x, y, r)
 export{

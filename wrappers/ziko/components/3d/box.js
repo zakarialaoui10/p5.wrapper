@@ -1,17 +1,22 @@
-import { ZikoP5Shape3D } from "./p5shape3d.js"
+import { ZikoP5Shape3D } from "./p5shape3d.js";
 
 class ZikoP5Box extends ZikoP5Shape3D{
-  constructor(x, y, z){
-    super(x, y)
+  constructor(x, y, z, w, h, d){
+    super(x, y, z)
     Object.assign(this.cache,{
-      z
+      w,
+      h, 
+      d
     })
   }
   draw(p){
-    p.box(20);
+    p.push();
+    p.translate(this.cache.x, this.cache.y, this.cache.z);
+    p.box(this.cache.w, this.cache.h, this.cache.d);
+    p.pop()
   }
 }
-const P5Box = ({x = 10, y = 10, z = 30}={}) => new ZikoP5Box(x, y, z);
+const P5Box = ({x = 10, y = 10, z = 30, w = 40, h = w, d = w}={}) => new ZikoP5Box(x, y, z, w, h, d);
 export{
   ZikoP5Box,
   P5Box

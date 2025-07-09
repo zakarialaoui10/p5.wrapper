@@ -18,14 +18,14 @@ class ZikoP5Shape{
         return this.cache.renderer;
     }
     maintain(p){
-        ['stroke', 'fill'].forEach(method=>{
-            if(this.cache[method]!==null){
-                // console.log(p[method])
-                // console.log(this.cache[method])
-                p[method](this.cache[method]);
-                // p["stroke"](198)
-            }
-        })
+        // ['stroke', 'fill'].forEach(method=>{
+        //     if(this.cache[method]!==null){
+        //         // console.log(p[method])
+        //         // console.log(this.cache[method])
+        //         p[method](this.cache[method]);
+        //         // p["stroke"](198)
+        //     }
+        // })
         return this;
     }
     stroke(color){
