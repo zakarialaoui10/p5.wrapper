@@ -5,11 +5,9 @@ class ZikoP5Shape2D extends ZikoP5Shape{
     }
     draw(p){
         p.push();
-        ['stroke', 'fill'].forEach(method=>{
-            if(this.cache[method]!==null){
-                p[method](this.cache[method]);
-            }
-        })
+        for(let key in this.cache.material){
+            if(this.cache.material[key]!==null) p[key](this.cache.material[key]);
+        }
         this.__draw_geo__(p);
         p.pop();
     }

@@ -22,7 +22,7 @@ class ZikoP5Canvas extends ZikoUIElement {
         p.clear();
         mode_dependent_drawing_callback.call(this, p);
         this.items.forEach((shape) => {
-            shape.maintain(p)
+            // shape.maintain(p)
             shape.draw(p)
             this.cache.loop_callback?.call(null, this);
         });
@@ -95,5 +95,4 @@ class ZikoP5Canvas extends ZikoUIElement {
   }
 }
 
-// const P5Canvas2D = (...items) => new ZikoP5Canvas2D(...items);
 export { ZikoP5Canvas };

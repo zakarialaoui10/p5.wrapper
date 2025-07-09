@@ -4,22 +4,17 @@ import { ZikoP5Shape2D } from "./p5shape2d.js"
 class ZikoP5Circle extends ZikoP5Shape2D{
   constructor(x, y, r){
     super(x, y)
-    Object.assign(this.cache,{
+    Object.assign(this.cache.geometry,{
       r
     })
   }
   __draw_geo__(p){
       p.circle(
-        this.cache.x,
-        this.cache.y,
-        this.cache.r 
+        this.cache.geometry.x,
+        this.cache.geometry.y,
+        this.cache.geometry.r 
       );
   }
-  // draw(p){
-  //   p.push();
-
-  //   p.pop();
-  // }
 }
 const P5Circle = ({x = 10, y = 10, r = 30}) => new ZikoP5Circle(x, y, r)
 export{

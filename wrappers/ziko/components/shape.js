@@ -3,13 +3,17 @@ class ZikoP5Shape{
         this.cache = {
             uuid: crypto.randomUUID(),
             renderer : null,
-            stroke : null,
-            fill : null,
-            x,
-            y,
+            // stroke : null,
+            // fill : null,
+            geometry : {
+                x,
+                y
+            },
+            material : {
+                stroke : null,
+                fill : null
+            }
         }
-        // this.cache.x = x;
-        // this.cache.y = y;
     }
     get uuid(){
         return this.cache.uuid;
@@ -17,39 +21,39 @@ class ZikoP5Shape{
     get renderer(){
         return this.cache.renderer;
     }
-    maintain(p){
-        // ['stroke', 'fill'].forEach(method=>{
-        //     if(this.cache[method]!==null){
-        //         // console.log(p[method])
-        //         // console.log(this.cache[method])
-        //         p[method](this.cache[method]);
-        //         // p["stroke"](198)
-        //     }
-        // })
-        return this;
-    }
+    // maintain(p){
+    //     // ['stroke', 'fill'].forEach(method=>{
+    //     //     if(this.cache[method]!==null){
+    //     //         // console.log(p[method])
+    //     //         // console.log(this.cache[method])
+    //     //         p[method](this.cache[method]);
+    //     //         // p["stroke"](198)
+    //     //     }
+    //     // })
+    //     return this;
+    // }
     stroke(color){
-        this.cache.stroke = color;
+        this.cache.material.stroke = color;
         return this;
     }
     fill(color){
-        this.cache.fill = color;
+        this.cache.material.fill = color;
         return this;
     }
     posX(x){
-        this.cache.x = x;
+        this.cache.geometry.x = x;
         return this;
     }
     posY(y){
-        this.cache.y = y;
+        this.cache.geometry.y = y;
         return this;
     }
     translateX(dx){
-        this.cache.x += dx;
+        this.cache.geometry.x += dx;
         return this;
     }
     translateY(dy){
-        this.cache.y += dy;
+        this.cache.geometry.y += dy;
         return this;
     }
     rotateX(){
