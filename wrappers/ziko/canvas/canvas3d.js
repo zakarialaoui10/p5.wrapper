@@ -1,11 +1,18 @@
 import { ZikoP5Canvas } from "./canvas.js";
 class ZikoP5Canvas3D extends ZikoP5Canvas{
   constructor(...items){
-    super("webgl", ...items)
+    super("webgl",mode_dependent_drawing_callback, ...items);
+    Object.assign(this.cache,{
+      use_orbit : false,
+    })
   }
-  useOrbitCoontrols(){
-
+  useOrbitControls(optios){
+    this.cache.useOrbitControls = true;
+    return this;
   }
+}
+function mode_dependent_drawing_callback(p){
+  if(this.cache.use_orbit) p.orbitControl();
 }
 
 const P5Canvas3D = (...items) => new ZikoP5Canvas3D(...items);

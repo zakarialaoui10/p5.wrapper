@@ -3,13 +3,13 @@ import "./App.css";
 import {cos, sin, PI } from "ziko"
 import Technologies from "./technologies.js";
 
-import { P5Canvas2D, P5Circle } from "p5.wrapper/van";
+import { P5Canvas3D, P5Circle } from "p5.wrapper/van";
 const c1 = P5Circle({x:0,y:0,r:30}).stroke('green')
 const c2 = P5Circle({x:0,y:0,r:30}).stroke('red')
-globalThis.c = P5Canvas2D(
+globalThis.c = P5Canvas3D(
   c1, c2
-).size("100%","400px")
-.view(-100, -100, 100, 100)
+).size("300px","400px")
+// .view(-100, -100, 100, 100)
 c.setCustomLoopCallback(e=>{
   c1.posX(50*cos(e.iter*PI/50))
   c1.posY(50*sin(e.iter*PI/50))

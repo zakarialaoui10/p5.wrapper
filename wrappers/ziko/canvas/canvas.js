@@ -23,7 +23,7 @@ class ZikoP5Canvas extends ZikoUIElement {
         // p.orbitControl() // 3D
         // this.view(-100, -100, 100, 100) // 2D
         // p.applyMatrix(this.cache.transormationMatrix.arr.flat(1)) // 2D
-        mode_dependent_drawing_callback.call(this, p)
+        mode_dependent_drawing_callback.call(this, p);
         this.items.forEach((shape) => {
             shape.maintain(p)
             shape.draw(p)
