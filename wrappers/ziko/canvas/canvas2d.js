@@ -123,11 +123,18 @@
 // }
 // import { P2D } from "p5"
 import { ZikoP5Canvas } from "./canvas.js";
+import { Matrix } from "ziko"
 class ZikoP5Canvas2D extends ZikoP5Canvas{
   constructor(...items){
-    super("p2d", ...items)
+    super("p2d",mode_dependent_drawing_callback, ...items)
+    Object.assign(this.cache,{
+      transormationMatrix : new Matrix([[0,0],[0,0],[0,0]])
+    })
   }
 }
-
+function mode_dependent_drawing_callback(p){
+    this.view(-100, -100, 100, 100) // 2D
+    p.applyMatrix(this.cache.transormationMatrix.arr.flat(1))
+}
 const P5Canvas2D = (...items) => new ZikoP5Canvas2D(...items);
 export { ZikoP5Canvas2D, P5Canvas2D };

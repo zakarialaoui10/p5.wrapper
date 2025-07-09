@@ -1,13 +1,12 @@
 import { ZikoUIElement, waitForUIElm, cos, sin, PI, Matrix } from "ziko";
 import p5  from "p5";
 class ZikoP5Canvas extends ZikoUIElement {
-  constructor(mode, ...items) {
+  constructor(mode,mode_dependent_drawing_callback, ...items) {
     super("div");
     Object.assign(this.cache,{
         iter: 0,
         loop_callback : null,
         isPaused : false,
-        transormationMatrix : new Matrix([[0,0],[0,0],[0,0]])
     })
     this.size("300px","300px")
     this.style({
@@ -16,21 +15,19 @@ class ZikoP5Canvas extends ZikoUIElement {
     this.items = [];
     this.p5 = new p5((p) => {
       p.setup = () => {
-        p.createCanvas(this.width, this.height, mode).parent(
-          this.element,
-        );
+        p.createCanvas(this.width, this.height, mode).parent(this.element);
         p.frameRate(30);
       };
       p.draw = () => {
         p.clear();
-        // this.view(-100, -100, 100, 100)
-        p.applyMatrix(this.cache.transormationMatrix.arr.flat(1))
+        // p.orbitControl() // 3D
+        // this.view(-100, -100, 100, 100) // 2D
+        // p.applyMatrix(this.cache.transormationMatrix.arr.flat(1)) // 2D
+        mode_dependent_drawing_callback.call(this, p)
         this.items.forEach((shape) => {
             shape.maintain(p)
             shape.draw(p)
             this.cache.loop_callback?.call(null, this);
-            // shape.posX(150+100*cos(this.iter*PI/50))
-            // shape.posY(150+100*sin(this.iter*PI/50))
         });
         this.cache.iter += 1;
       };

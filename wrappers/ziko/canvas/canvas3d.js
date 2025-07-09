@@ -8,5 +8,5 @@ class ZikoP5Canvas3D extends ZikoP5Canvas{
   }
 }
 
-const P5Canvas23D = (...items) => new ZikoP5Canvas3D(...items);
-export { ZikoP5Canvas3D, P5Canvas23D };
+const P5Canvas3D = (...items) => new ZikoP5Canvas3D(...items);
+export { ZikoP5Canvas3D, P5Canvas3D };
