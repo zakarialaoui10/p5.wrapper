@@ -10,11 +10,11 @@
 
 ## API 
 ### Canvases
- `P5Canvas2D(...shapes)` : Creates a 2D p5.js canvas container.
- `P5Canvas3D(...shapes)` : 
+ - `P5Canvas2D(...shapes)` : Creates a 2D p5.js canvas container.
+ - `P5Canvas3D(...shapes)` :  Creates a webgl p5.js canvas container.
 ### Shapes 
- `P5Circle({x, y, r})` : 
- `P5Box({x, y, z, w, h, d})` : 
+ - `P5Circle({x, y, r})` : 
+ - `P5Box({x, y, z, w, h, d})` : 
 ## Usage 
 
 ```js
