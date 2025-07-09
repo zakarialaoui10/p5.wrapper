@@ -1,4 +1,4 @@
-import { ZikoUIElement, waitForUIElm, cos, sin, PI } from "ziko";
+import { ZikoUIElement, waitForUIElm, cos, sin, PI, Matrix } from "ziko";
 import p5  from "p5";
 class ZikoP5Canvas2D extends ZikoUIElement {
   constructor(...items) {
@@ -6,7 +6,8 @@ class ZikoP5Canvas2D extends ZikoUIElement {
     Object.assign(this.cache,{
         iter: 0,
         loop_callback : null,
-        isPaused : false
+        isPaused : false,
+        transormationMatrix : new Matrix([[0,0],[0,0],[0,0]])
     })
     this.size("300px","300px")
     this.style({
@@ -22,7 +23,8 @@ class ZikoP5Canvas2D extends ZikoUIElement {
       };
       p.draw = () => {
         p.clear();
-        this.view(-100, -100, 100, 100)
+        // this.view(-100, -100, 100, 100)
+        p.applyMatrix(this.cache.transormationMatrix.arr.flat(1))
         this.items.forEach((shape) => {
             shape.maintain(p)
             shape.draw(p)
@@ -68,9 +70,16 @@ class ZikoP5Canvas2D extends ZikoUIElement {
     const sy = this.height / (yMax - yMin);
     const tx = -xMin * sx;
     const ty = -yMin * sy;
-    this.cache.scaleFactor = Math.min(sx, sy);
-    this.p5.resetMatrix();
-    this.p5.applyMatrix(sx, 0, 0, sy, tx, ty);
+    this.cache.transormationMatrix.set(0, 0, sx);
+    this.cache.transormationMatrix.set(0, 1, 0);
+    this.cache.transormationMatrix.set(1, 0, 0);
+    this.cache.transormationMatrix.set(1, 1, sy);
+    this.cache.transormationMatrix.set(2, 0, tx);
+    this.cache.transormationMatrix.set(2, 1, ty);
+    // this.cache.scaleFactor = Math.min(sx, sy);
+    // console.log({sx, sy, tx, ty})
+    // this?.p5?.resetMatrix();
+    // this?.p5?.applyMatrix(sx, 0, 0, sy, tx, ty);
     return this;
   }
   setCustomLoopCallback(callback){

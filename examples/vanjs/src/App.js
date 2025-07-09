@@ -9,7 +9,7 @@ const c2 = P5Circle({x:0,y:0,r:30}).stroke('red')
 globalThis.c = P5Canvas2D(
   c1, c2
 ).size("100%","400px")
-// .view(-100, -100, 100, 100)
+.view(-100, -100, 100, 100)
 c.setCustomLoopCallback(e=>{
   c1.posX(50*cos(e.iter*PI/50))
   c1.posY(50*sin(e.iter*PI/50))
