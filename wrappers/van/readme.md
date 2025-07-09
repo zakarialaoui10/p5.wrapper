@@ -13,7 +13,7 @@
 ### Cdn : To Do
 
 ## API 
-### Canvaces
+### Canvases
  `P5Canvas2D(...shapes)` : Creates a 2D p5.js canvas container.
  `P5Canvas2D(...shapes)` : 
 ### Shapes 
@@ -42,8 +42,7 @@ van.add(document.body, canvas)
 |Library|Implementation|Status|
 |-|-|-|
 |[Zikojs]()|[p5.wrapper/ziko](../ziko/readme.md)| In Progress
-|[Vanjs]()|[p5.wrapper/van](wrappers/van/readme.md)| In Progress
-|[React]()|| To Do
+|[React]()|[p5.wrapper/react](../react/readme.md)| In Progress
 |[Svelte]()|| To Do 
 |[Vue]()|| To Do
 |[Solid]()|| To Do 

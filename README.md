@@ -6,7 +6,7 @@ This makes it easy to use `p5` in a component-based way while keeping full contr
 
 
 ## API 
-### Scenes
+### Canvases
  - `P5Canvas2D(...shapes)`
  - `P5Canvas3D(...shapes)`
 ### Shapes 
@@ -20,10 +20,10 @@ These methods allow you to set properties like size, style, and behavior directl
 
 ```js
 P5Canvas2D(
-    P5Circle({ x: 0, y: 0, r: 50 })
-  ).fill('red')
-  .view(-100, -100, 100, 100)
-  .style({border: "1px solid blue"});
+    P5Circle({ x: 0, y: 0, r: 50 }).fill("red")
+   )
+   .view(-100, -100, 100, 100)
+   .style({ border: "1px solid blue" });
 ```
 In `React`, `Svelte`, `Vue`, and other modern frameworks that use JSX or template-based approaches, canvas configuration is done through props, offering the same capabilities as chainable methods used in hyperscript-based environments.
 
@@ -38,18 +38,18 @@ In `React`, `Svelte`, `Vue`, and other modern frameworks that use JSX or templat
 |-|-|-|
 |[Zikojs]()|[p5.wrapper/ziko](wrappers/ziko/readme.md)| In Progress ..
 |[Vanjs]()|[p5.wrapper/van](wrappers/van/readme.md)| In Progress ..
-|[React]()|[p5.wrapper/react](wrapper/react/readme.me)| In Progress ..
+|[React]()|[p5.wrapper/react](wrappers/react/readme.md)| In Progress ..
 |[Svelte]()|| To Do 
 |[Vue]()|| To Do
 |[Solid]()|| To Do 
 |[Preact]()|| To Do 
 |[Astro]()|| To Do 
 
-# ⭐️ Show your support <a name="support"></a>
+# ⭐️ Show your support 
 
 If you appreciate the library, kindly demonstrate your support by giving it a star!<br>
 [![Star](https://img.shields.io/github/stars/zakarialaoui10/p5.wrapper?style=social)](https://github.com/zakarialaoui10/p5.wrapper)
 <!--## Financial support-->
 # License 
-This projet is licensed under the terms of MIT License 
+This project is licensed under the terms of MIT License 
 <img src="https://img.shields.io/github/license/zakarialaoui10/p5.wrapper?color=rgb%2820%2C21%2C169%29" width="100" align="right">
