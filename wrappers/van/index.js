@@ -4,6 +4,7 @@ import { ZikoUIElement } from "ziko"
 const originalTags = van.tags;
 const originalAdd = van.add;
 
+
 van.tags = new Proxy(originalTags, {
   get(target, tagName, receiver) {
     const originalTagFn = Reflect.get(target, tagName, receiver)
@@ -15,7 +16,15 @@ van.tags = new Proxy(originalTags, {
   }
 });
 
-// van.add = new 
+van.add = (dom, ...children) =>{
+  children = children.map(child=>{
+    if(child instanceof ZikoUIElement) return child.element;
+    return child;
+  })
+  console.log({children})
+  return originalAdd(dom, ...children)
+}
+
 
 // import "ziko-wrapper/van"
 export * from "../ziko/index.js";
