@@ -2,6 +2,9 @@
 
 A minimalist starter template for VanJS.
 
+### Demo
+[Stackblitz](https://stackblitz.com/fork/github/zakarialaoui10/p5.wrapper/tree/main/examples/vanjs)
+
 ### Features
 
 - NodeJS Configuration (works with any runtime)
