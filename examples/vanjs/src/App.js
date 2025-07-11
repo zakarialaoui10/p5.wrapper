@@ -1,6 +1,6 @@
 import { P5Canvas2D, P5Circle } from "p5.wrapper/van";
 import van from "vanjs-core";
-import { cos, sin, PI } from "ziko";
+import { cos, sin, PI, Flex } from "ziko";
 
 const c1 = P5Circle({ r : 40})
              .fill("blue")
