@@ -11,8 +11,8 @@ export interface ZikoP5Canvas2D extends ZikoUIElement {
 
   view(
     xMin?: number,
-    xMax?: number,
     yMin?: number,
+    xMax?: number,
     yMax?: number
   ): this;
 
