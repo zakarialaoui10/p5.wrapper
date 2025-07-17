@@ -23,7 +23,7 @@ class ZikoP5Square extends ZikoP5Shape2D{
   }
 }
 const square = (x, y, s, {tr, tl, br, bl} = {}) => new ZikoP5Square(x, y, s, tr, tl, br, bl);
-const Square = ({x, y, r, tr, tl, br, bl} = {}) => new ZikoP5Square(x, y, r, tr, tl, br, bl);
+const Square = ({x, y, s, tr, tl, br, bl} = {}) => new ZikoP5Square(x, y, s, tr, tl, br, bl);
 export{
   ZikoP5Square,
   square,
