@@ -35,9 +35,9 @@ class ZikoP5Triangle extends ZikoP5Shape2D{
   }
 }
 const triangle = (x1, y1, x2, y2, x3, y3) => new ZikoP5Triangle(x1, y1, x2, y2, x3, y3);
-// const Triangle = ({x1, y1, x2, y3, x3, y3} = {}) => new ZikoP5Triangle(x1, y1, x2, y3, x3, y3);
+const Triangle = ({x1, y1, x2, y2, x3, y3} = {}) => new ZikoP5Triangle(x1, y1, x2, y2, x3, y3);
 export{
   ZikoP5Triangle,
   triangle,
-//   Triangle
+  Triangle
 }

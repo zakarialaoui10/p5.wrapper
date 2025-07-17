@@ -2,7 +2,7 @@ import { ZikoP5Shape2D } from "./p5shape2d.js"
 
 class ZikoP5Square extends ZikoP5Shape2D{
   constructor(x, y, s, tr, tl, br, bl){
-    super(x, y)
+    super([x, y])
     Object.assign(this.cache.geometry,{
       s,
       tr, 
@@ -13,8 +13,7 @@ class ZikoP5Square extends ZikoP5Shape2D{
   }
   __draw_geo__(p){
       p.square(
-        this.cache.geometry.x,
-        this.cache.geometry.y,
+        ...this.cache.geometry.coordinates,
         this.cache.geometry.s,
         this.cache.geometry.tr,
         this.cache.geometry.tl,
@@ -24,7 +23,7 @@ class ZikoP5Square extends ZikoP5Shape2D{
   }
 }
 const square = (x, y, s, {tr, tl, br, bl} = {}) => new ZikoP5Square(x, y, s, tr, tl, br, bl);
-const Square = ({x, y, r} = {}) => new ZikoP5Square(x, y, r);
+const Square = ({x, y, r, tr, tl, br, bl} = {}) => new ZikoP5Square(x, y, r, tr, tl, br, bl);
 export{
   ZikoP5Square,
   square,
