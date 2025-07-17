@@ -16,8 +16,8 @@ class ZikoP5Box extends ZikoP5Shape3D{
     p.pop()
   }
 }
-const P5Box = ({x = 10, y = 10, z = 30, w = 40, h = w, d = w}={}) => new ZikoP5Box(x, y, z, w, h, d);
+const Box = (x, y, z, w, h, d) => new ZikoP5Box(x, y, z, w, h, d);
 export{
   ZikoP5Box,
-  P5Box
+  Box
 }
