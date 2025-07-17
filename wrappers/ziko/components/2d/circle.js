@@ -19,8 +19,10 @@ class ZikoP5Circle extends ZikoP5Shape2D{
       );
   }
 }
-const Circle = (x, y, r) => new ZikoP5Circle(x, y, r);
+const circle = (x, y, r) => new ZikoP5Circle(x, y, r);
+const Circle = ({x, y, r} = {}) => new ZikoP5Circle(x, y, r);
 export{
   ZikoP5Circle,
+  circle,
   Circle
 }

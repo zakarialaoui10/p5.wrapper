@@ -1,14 +1,18 @@
 import {Flex, cos, sin, PI} from "ziko"
 import Hello from "./components/Hello.js"
-import { P5Canvas2D, Circle } from "p5.wrapper/ziko"
-globalThis.Circle = Circle
-globalThis.c1 = Circle(0, 0, 20) 
+import { P5Canvas2D, circle, line } from "p5.wrapper/ziko"
+globalThis.circle = circle
+globalThis.c1 = circle(0, 0, 20) 
+globalThis.l1 = line(-50, -50, 50, -50)
 globalThis.c = P5Canvas2D(
-  c1
+  c1,
+  l1
 ).view(-150, -150, 150, 150)
 c.setCustomLoopCallback(e=>{
   c1.posX(100*cos(e.iter*PI/50))
   c1.posY(100*sin(e.iter*PI/50))
+  // l1.posY(50* sin(e.iter *PI/20), 50* sin(e.iter *PI/20))
+  // l1.translateY(e.iter/10)
 })
 
 Flex(
