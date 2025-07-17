@@ -2,7 +2,7 @@ import { ZikoP5Shape2D } from "./p5shape2d.js"
 
 class ZikoP5Circle extends ZikoP5Shape2D{
   constructor(x, y, r){
-    super(x, y)
+    super([x, y])
     Object.assign(this.cache.geometry,{
       r
     })
@@ -13,8 +13,7 @@ class ZikoP5Circle extends ZikoP5Shape2D{
   }
   __draw_geo__(p){
       p.circle(
-        this.cache.geometry.x,
-        this.cache.geometry.y,
+        ...this.cache.geometry.coordinates,
         this.cache.geometry.r 
       );
   }

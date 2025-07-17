@@ -1,13 +1,12 @@
 class ZikoP5Shape{
-    constructor(x, y){
+    constructor(coordinates = []){
         this.cache = {
             uuid: crypto.randomUUID(),
             renderer : null,
             // stroke : null,
             // fill : null,
             geometry : {
-                x,
-                y
+                coordinates
             },
             material : {
                 stroke : null,
@@ -41,19 +40,19 @@ class ZikoP5Shape{
         return this;
     }
     posX(x){
-        this.cache.geometry.x = x;
+        this.cache.geometry.coordinates[0] = x;
         return this;
     }
     posY(y){
-        this.cache.geometry.y = y;
+        this.cache.geometry.coordinates[1] = y;
         return this;
     }
     translateX(dx){
-        this.cache.geometry.x += dx;
+        this.cache.geometry.coordinates[0] += dx;
         return this;
     }
     translateY(dy){
-        this.cache.geometry.y += dy;
+        this.cache.geometry.coordinates[1] += dy;
         return this;
     }
     rotateX(){

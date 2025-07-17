@@ -1,47 +1,37 @@
 import { ZikoP5Shape2D } from "./p5shape2d.js"
 
 class ZikoP5Line extends ZikoP5Shape2D{
-  constructor(x, y, x1, y1){
-    super()
-    console.log(y1)
-    Object.assign(this.cache.geometry,{
-        x, 
-        y,
-        x1,
-        y1
-    })
+  constructor(x1, y1, x2, y2){
+    super([x1, y1, x2, y2])
   }
   __draw_geo__(p){
       p.line(
-        this.cache.geometry.x,
-        this.cache.geometry.y,
-        this.cache.geometry.x1,
-        this.cache.geometry.y1,
+        ...this.cache.geometry.coordinates,
       );
   }
-  posX(x0, x1){
-    this.cache.geometry.x = x0;
-    this.cache.geometry.x1 = x1;
+  posX(x1, x2){
+    this.cache.geometry.coordinates[0] = x1;
+    this.cache.geometry.coordinates[2] = x2;
     return this;
   }
-  posY(y0, y1){
-    this.cache.geometry.y = y0;
-    this.cache.geometry.y1 = y1;
+  posY(y1, y2){
+    this.cache.geometry.coordinates[1] = y1;
+    this.cache.geometry.coordinates[3] = y2;
     return this;
   }
-  translateX(dx0, dx1 = dx0){
-    this.cache.geometry.x += dx0;
-    this.cache.geometry.x1 += dx1;
+  translateX(dx1, dx2 = dx1){
+    this.cache.geometry.coordinates[0] += dx1;
+    this.cache.geometry.coordinates[2] += dx2;
     return this;
   }
-  translateY(dy0, dy1 = dy0){
-    this.cache.geometry.y += dy0;
-    this.cache.geometry.y1 += dy1;
+  translateY(dy1, dy2 = dy1){
+    this.cache.geometry.coordinates[1] += dy1;
+    this.cache.geometry.coordinates[3] += dy2;
     return this;
   }
 }
-const line = (x0, y0, x1, y1) => new ZikoP5Line(x0, y0, x1, y1);
-const Line = ({x0, y0, x1, y1} = {}) => new ZikoP5Line(x0, y0, x1, y1);
+const line = (x1, y1, x2, y2) => new ZikoP5Line(x1, y1, x2, y2);
+const Line = ({x1, y1, x2, y2} = {}) => new ZikoP5Line(x1, y1, x2, y2);
 export{
   ZikoP5Line,
   line,

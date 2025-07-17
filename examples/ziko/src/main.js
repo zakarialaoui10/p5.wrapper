@@ -1,12 +1,13 @@
 import {Flex, cos, sin, PI} from "ziko"
 import Hello from "./components/Hello.js"
-import { P5Canvas2D, circle, line } from "p5.wrapper/ziko"
+import { P5Canvas2D, circle, line, triangle } from "p5.wrapper/ziko"
 globalThis.circle = circle
 globalThis.c1 = circle(0, 0, 20) 
 globalThis.l1 = line(-50, -50, 50, -50)
 globalThis.c = P5Canvas2D(
   c1,
-  l1
+  l1,
+  triangle(-50, -50, 50, -50, 0, 100)
 ).view(-150, -150, 150, 150)
 c.setCustomLoopCallback(e=>{
   c1.posX(100*cos(e.iter*PI/50))

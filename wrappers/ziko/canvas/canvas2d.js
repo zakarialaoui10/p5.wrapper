@@ -143,7 +143,7 @@ class ZikoP5Canvas2D extends ZikoP5Canvas{
     this.cache.transormationMatrix.set(0, 0, sx);
     this.cache.transormationMatrix.set(0, 1, 0);
     this.cache.transormationMatrix.set(1, 0, 0);
-    this.cache.transormationMatrix.set(1, 1, sy);
+    this.cache.transormationMatrix.set(1, 1, -sy);
     this.cache.transormationMatrix.set(2, 0, tx);
     this.cache.transormationMatrix.set(2, 1, ty);
     return this;

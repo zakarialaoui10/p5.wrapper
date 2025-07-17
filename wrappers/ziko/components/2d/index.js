@@ -4,3 +4,4 @@ export * from "./ellipse.js";
 export * from "./arc.js";
 export * from "./point.js";
 export * from "./square.js";
+export * from "./triangle.js";
