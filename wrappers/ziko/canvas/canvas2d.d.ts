@@ -32,6 +32,6 @@ export declare class ZikoP5Canvas2D extends ZikoUIElement {
   constructor(...items: ZikoP5Shape2D[]);
 }
 
-export declare function P5Canvas2D(
+export declare function Canvas2D(
   ...items: ZikoP5Shape2D[]
 ): ZikoP5Canvas2D;

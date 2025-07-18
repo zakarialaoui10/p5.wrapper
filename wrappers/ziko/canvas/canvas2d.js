@@ -152,5 +152,5 @@ class ZikoP5Canvas2D extends ZikoP5Canvas{
 function mode_dependent_drawing_callback(p){
     p.applyMatrix(this.cache.transormationMatrix.arr.flat(1))
 }
-const P5Canvas2D = (...items) => new ZikoP5Canvas2D(...items);
-export { ZikoP5Canvas2D, P5Canvas2D };
+const Canvas2D = (...items) => new ZikoP5Canvas2D(...items);
+export { ZikoP5Canvas2D, Canvas2D };

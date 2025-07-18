@@ -15,5 +15,5 @@ function mode_dependent_drawing_callback(p){
   if(this.cache.use_orbit) p.orbitControl();
 }
 
-const P5Canvas3D = (...items) => new ZikoP5Canvas3D(...items);
-export { ZikoP5Canvas3D, P5Canvas3D };
+const Canvas3D = (...items) => new ZikoP5Canvas3D(...items);
+export { ZikoP5Canvas3D, Canvas3D };
