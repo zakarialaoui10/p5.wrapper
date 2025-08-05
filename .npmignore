@@ -1,2 +1,9 @@
 examples/
 assets/
+scripts/
+
+i want to create a plugin for data transform , that support this 
+import Component from "Component.html"
+import Blog from "Blog.md"
+import Data from "data.csv"
+...

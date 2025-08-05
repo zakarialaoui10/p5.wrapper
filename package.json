@@ -36,8 +36,8 @@
   "license": "MIT ",
   "dependencies": {
     "p5": "^2.0.3",
-    "ziko": "^0.0.27",
-    "ziko-wrapper": "^0.0.24"
+    "ziko": "^0.34.1",
+    "ziko-wrapper": "^0.0.28"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.6",
