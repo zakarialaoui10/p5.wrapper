@@ -1,8 +1,8 @@
-import { ZikoUIElement } from "ziko";
+import { UIElement } from "ziko";
 import { ZikoP5Shape2D } from "../components/p5shape2d.js"
 import type p5 from "p5";
 
-export interface ZikoP5Canvas2D extends ZikoUIElement {
+export interface ZikoP5Canvas2D extends UIElement {
   readonly iter: number;
   readonly xMin: number;
   readonly xMax: number;
@@ -28,7 +28,7 @@ export interface ZikoP5Canvas2D extends ZikoUIElement {
   items: ZikoP5Shape2D[];
 }
 
-export declare class ZikoP5Canvas2D extends ZikoUIElement {
+export declare class ZikoP5Canvas2D extends UIElement {
   constructor(...items: ZikoP5Shape2D[]);
 }
 

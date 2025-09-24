@@ -1,6 +1,6 @@
-// import { ZikoUIElement, waitForUIElm, cos, sin, PI, Matrix } from "ziko";
+// import { UIElement, waitForUIElm, cos, sin, PI, Matrix } from "ziko";
 // import p5  from "p5";
-// class ZikoP5Canvas2D extends ZikoUIElement {
+// class ZikoP5Canvas2D extends UIElement {
 //   constructor(...items) {
 //     super("div");
 //     Object.assign(this.cache,{

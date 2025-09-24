@@ -1,6 +1,6 @@
 {
   "name": "p5.wrapper",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A lightweight declarative wrapper for p5.js that lets you build interactive sketches using Web Components or frameworks like Zikojs, React, VanJS...",
   "type": "module",
   "main": "src/index.js",
@@ -36,7 +36,7 @@
   "license": "MIT ",
   "dependencies": {
     "p5": "^2.0.3",
-    "ziko": "^0.35.0",
+    "ziko": "^0.46.0",
     "ziko-wrapper": "^0.0.28"
   },
   "devDependencies": {
