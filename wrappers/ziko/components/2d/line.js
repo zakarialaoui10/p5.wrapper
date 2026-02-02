@@ -1,6 +1,6 @@
-import { ZikoP5Shape2D } from "./p5shape2d.js"
+import { UIP5Shape2D } from "./p5shape2d.js"
 
-class ZikoP5Line extends ZikoP5Shape2D{
+class UIP5Line extends UIP5Shape2D{
   constructor(x1, y1, x2, y2){
     super([x1, y1, x2, y2])
   }
@@ -30,10 +30,10 @@ class ZikoP5Line extends ZikoP5Shape2D{
     return this;
   }
 }
-const line = (x1, y1, x2, y2) => new ZikoP5Line(x1, y1, x2, y2);
-const Line = ({x1, y1, x2, y2} = {}) => new ZikoP5Line(x1, y1, x2, y2);
+const line = (x1, y1, x2, y2) => new UIP5Line(x1, y1, x2, y2);
+const Line = ({x1, y1, x2, y2} = {}) => new UIP5Line(x1, y1, x2, y2);
 export{
-  ZikoP5Line,
+  UIP5Line,
   line,
   Line
 }

@@ -1,4 +1,4 @@
-class ZikoP5Shape{
+class UIP5Shape{
     constructor(coordinates = []){
         this.cache = {
             uuid: crypto.randomUUID(),
@@ -63,5 +63,5 @@ class ZikoP5Shape{
     }
 }
 export{
-    ZikoP5Shape
+    UIP5Shape
 }

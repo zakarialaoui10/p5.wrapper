@@ -1,5 +1,5 @@
-import { ZikoP5Shape } from "../shape.js";
-class ZikoP5Shape2D extends ZikoP5Shape{
+import { UIP5Shape } from "../shape.js";
+class UIP5Shape2D extends UIP5Shape{
     constructor(x, y){
         super(x, y);
     }
@@ -13,5 +13,5 @@ class ZikoP5Shape2D extends ZikoP5Shape{
     }
 }
 export{
-    ZikoP5Shape2D
+    UIP5Shape2D
 }

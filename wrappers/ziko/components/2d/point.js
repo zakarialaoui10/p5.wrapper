@@ -1,6 +1,6 @@
-import { ZikoP5Shape2D } from "./p5shape2d.js"
+import { UIP5Shape2D } from "./p5shape2d.js"
 
-class ZikoP5Point extends ZikoP5Shape2D{
+class UIP5Point extends UIP5Shape2D{
   constructor(x, y, z){
     super([x, y])
     Object.assign(this.cache.geometry,{
@@ -14,10 +14,10 @@ class ZikoP5Point extends ZikoP5Shape2D{
       );
   }
 }
-const point = (x, y, z) => new ZikoP5Point(x, y, z);
-const Point = ({x, y, z} = {}) => new ZikoP5Point(x, y, z);
+const point = (x, y, z) => new UIP5Point(x, y, z);
+const Point = ({x, y, z} = {}) => new UIP5Point(x, y, z);
 export{
-  ZikoP5Point,
+  UIP5Point,
   point,
   Point
 }

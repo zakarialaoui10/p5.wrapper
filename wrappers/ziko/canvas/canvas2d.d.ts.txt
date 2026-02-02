@@ -1,5 +1,5 @@
 import { UIElement } from "ziko";
-import { ZikoP5Shape2D } from "../components/p5shape2d.js"
+import { UIP5Shape2D } from "../components/p5shape2d.js"
 import type p5 from "p5";
 
 export interface UIP5Canvas2D extends UIElement {
@@ -20,18 +20,18 @@ export interface UIP5Canvas2D extends UIElement {
     callback: (canvas: UIP5Canvas2D) => void
   ): this;
 
-  append(...items: ZikoP5Shape2D[]): this;
+  append(...items: UIP5Shape2D[]): this;
 
-  remove(...items: ZikoP5Shape2D[]): this;
+  remove(...items: UIP5Shape2D[]): this;
 
   p5: p5;
-  items: ZikoP5Shape2D[];
+  items: UIP5Shape2D[];
 }
 
 export declare class UIP5Canvas2D extends UIElement {
-  constructor(...items: ZikoP5Shape2D[]);
+  constructor(...items: UIP5Shape2D[]);
 }
 
 export declare function Canvas2D(
-  ...items: ZikoP5Shape2D[]
+  ...items: UIP5Shape2D[]
 ): UIP5Canvas2D;

@@ -10,7 +10,9 @@ export class UIP5Canvas extends UIElement {
     })
     this.size("300px","300px")
     this.style({
-        outline : "1px red solid",  
+        outline : "2px darkblue dotted",
+        borderRadius : '1rem',
+        margin : '10px'  
     })
     this.items = [];
     this.p5 = new p5((p) => {

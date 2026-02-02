@@ -18,16 +18,16 @@ globalThis.c = Canvas2D(
 
 c.mount(document.body)
 .view(-150, -150, 150, 150)
-c.setCustomLoopCallback(e=>{
-  c1.posX(100*cos(e.iter*PI/50))
-  c1.posY(100*sin(e.iter*PI/50))
-  // l1.posY(50* sin(e.iter *PI/20), 50* sin(e.iter *PI/20))
-  // l1.translateY(e.iter/10)
-})
+// c.setCustomLoopCallback(e=>{
+//   c1.posX(100*cos(e.iter*PI/50))
+//   c1.posY(100*sin(e.iter*PI/50))
+//   // l1.posY(50* sin(e.iter *PI/20), 50* sin(e.iter *PI/20))
+//   // l1.translateY(e.iter/10)
+// })
 
-globalThis.c = Canvas3D(
-  box(10, 0, 0, 200, 200, 200)
-).useOrbitControls()
+// globalThis.c = Canvas3D(
+//   box(10, 0, 0, 200, 200, 200)
+// ).useOrbitControls()
 // Flex(
 //   Hello({name : "world"}),
 //   c

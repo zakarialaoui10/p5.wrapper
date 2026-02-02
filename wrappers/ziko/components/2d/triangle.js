@@ -1,6 +1,6 @@
-import { ZikoP5Shape2D } from "./p5shape2d.js"
+import { UIP5Shape2D } from "./p5shape2d.js"
 
-class ZikoP5Triangle extends ZikoP5Shape2D{
+class UIP5Triangle extends UIP5Shape2D{
   constructor(x1, y1, x2, y2, x3, y3){
     super([x1, y1, x2, y2, x3, y3])
   }
@@ -34,10 +34,10 @@ class ZikoP5Triangle extends ZikoP5Shape2D{
     return this;
   }
 }
-const triangle = (x1, y1, x2, y2, x3, y3) => new ZikoP5Triangle(x1, y1, x2, y2, x3, y3);
-const Triangle = ({x1, y1, x2, y2, x3, y3} = {}) => new ZikoP5Triangle(x1, y1, x2, y2, x3, y3);
+const triangle = (x1, y1, x2, y2, x3, y3) => new UIP5Triangle(x1, y1, x2, y2, x3, y3);
+const Triangle = ({x1, y1, x2, y2, x3, y3} = {}) => new UIP5Triangle(x1, y1, x2, y2, x3, y3);
 export{
-  ZikoP5Triangle,
+  UIP5Triangle,
   triangle,
   Triangle
 }

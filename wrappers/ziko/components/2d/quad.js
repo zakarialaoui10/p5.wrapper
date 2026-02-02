@@ -1,6 +1,6 @@
-import { ZikoP5Shape2D } from "./p5shape2d.js"
+import { UIP5Shape2D } from "./p5shape2d.js"
 
-class ZikoP5Quad extends ZikoP5Shape2D{
+class UIP5Quad extends UIP5Shape2D{
   constructor(x1, y1, x2, y2, x3, y3, x4, y4){
     super([x1, y1, x2, y2, x3, y3, x4, y4])
   }
@@ -38,10 +38,10 @@ class ZikoP5Quad extends ZikoP5Shape2D{
     return this;
   }
 }
-const quad = (x1, y1, x2, y2, x3, y3, x4, y4) => new ZikoP5Quad(x1, y1, x2, y2, x3, y3, x4, y4);
-const Quad = ({x1, y1, x2, y2, x3, y3, x4, y4} = {}) => new ZikoP5Quad(x1, y1, x2, y2, x3, y3, x4, y4);
+const quad = (x1, y1, x2, y2, x3, y3, x4, y4) => new UIP5Quad(x1, y1, x2, y2, x3, y3, x4, y4);
+const Quad = ({x1, y1, x2, y2, x3, y3, x4, y4} = {}) => new UIP5Quad(x1, y1, x2, y2, x3, y3, x4, y4);
 export{
-  ZikoP5Quad,
+  UIP5Quad,
   quad,
   Quad
 }

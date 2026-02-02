@@ -1,5 +1,5 @@
 import { UIP5Canvas2D } from "../canvas/canvas2d";
-export declare class ZikoP5Shape2D {
+export declare class UIP5Shape2D {
   constructor(x: number, y: number);
 
   readonly uuid: string;

@@ -1,6 +1,6 @@
 import {map, waitForUIElm} from "ziko"
 
-class ZikoP5Circle {
+class UIP5Circle {
   constructor(x, y, r){
     this.x = x; 
     this.y = y;
@@ -14,7 +14,7 @@ class ZikoP5Circle {
     );
   }
 }
-const P5Circle = (x, y, r) => new ZikoP5Circle(x, y, r)
+const P5Circle = (x, y, r) => new UIP5Circle(x, y, r)
 const Circle = ({ x, y, r }) => (ctx) => {
   let width = ctx.canvas.width 
   let height = ctx.canvas.height

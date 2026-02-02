@@ -1,6 +1,6 @@
 {
   "name": "p5.wrapper",
-  "version": "0.3.3",
+  "version": "0.4.1",
   "description": "A lightweight declarative wrapper for p5.js that lets you build interactive sketches using Web Components or frameworks like Zikojs, React, VanJS...",
   "type": "module",
   "main": "src/index.js",
