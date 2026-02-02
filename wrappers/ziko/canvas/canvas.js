@@ -1,8 +1,8 @@
-import { UIElement, waitForUIElm, cos, sin, PI, Matrix } from "ziko";
+import { UIElement } from "ziko/ui";
 import p5  from "p5";
-class ZikoP5Canvas extends UIElement {
-  constructor(mode,mode_dependent_drawing_callback, ...items) {
-    super("div");
+export class UIP5Canvas extends UIElement {
+  constructor(mode, mode_dependent_drawing_callback, ...items) {
+    super({element : 'div'});
     Object.assign(this.cache,{
         iter: 0,
         loop_callback : null,
@@ -29,7 +29,7 @@ class ZikoP5Canvas extends UIElement {
         this.cache.iter += 1;
       };
     });
-    this.append(...items)
+    this.add(...items)
   }
   get iter(){
     return this.cache.iter;
@@ -63,7 +63,7 @@ class ZikoP5Canvas extends UIElement {
     this.p5.frameRate(fps);
     return this;
   }
-  append(...items){
+  add(...items){
     for(const item of items){
         this.items.push(item);
         item.cache.renderer = this;
@@ -94,5 +94,3 @@ class ZikoP5Canvas extends UIElement {
     return this;
   }
 }
-
-export { ZikoP5Canvas };

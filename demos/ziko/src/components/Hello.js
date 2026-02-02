@@ -1,6 +1,6 @@
-import { h1 } from "ziko"
+import { tags } from "ziko/ui"
 const Hello=({name})=>{
-    return h1(`Hello ${name}`).style({
+    return tags.h1(`Hello ${name}`).style({
         color : "gold",
     })
 }

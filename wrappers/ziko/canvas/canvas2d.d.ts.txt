@@ -2,7 +2,7 @@ import { UIElement } from "ziko";
 import { ZikoP5Shape2D } from "../components/p5shape2d.js"
 import type p5 from "p5";
 
-export interface ZikoP5Canvas2D extends UIElement {
+export interface UIP5Canvas2D extends UIElement {
   readonly iter: number;
   readonly xMin: number;
   readonly xMax: number;
@@ -17,7 +17,7 @@ export interface ZikoP5Canvas2D extends UIElement {
   ): this;
 
   setCustomLoopCallback(
-    callback: (canvas: ZikoP5Canvas2D) => void
+    callback: (canvas: UIP5Canvas2D) => void
   ): this;
 
   append(...items: ZikoP5Shape2D[]): this;
@@ -28,10 +28,10 @@ export interface ZikoP5Canvas2D extends UIElement {
   items: ZikoP5Shape2D[];
 }
 
-export declare class ZikoP5Canvas2D extends UIElement {
+export declare class UIP5Canvas2D extends UIElement {
   constructor(...items: ZikoP5Shape2D[]);
 }
 
 export declare function Canvas2D(
   ...items: ZikoP5Shape2D[]
-): ZikoP5Canvas2D;
+): UIP5Canvas2D;

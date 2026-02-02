@@ -8,9 +8,6 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "ziko": "^0.0.26"
-  },
   "devDependencies": {
     "vite": "^6.3.5"
   }
